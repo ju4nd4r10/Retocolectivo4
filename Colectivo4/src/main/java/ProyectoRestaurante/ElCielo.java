@@ -10,7 +10,8 @@ public class ElCielo {
     Integer menuOption=0;
     String colorAzul= "\u001B[34m";
     HashMap<String,Object> employes= new HashMap<>();
-    HashMap<Integer,String> dishes= new HashMap<>();
+    HashMap< String,Object> dishes= new HashMap<>();
+    HashMap<String, Object> ingredients= new HashMap<>();
 
         System.out.println("\n************");
         System.out.println("** RESTAURANTE EL CIElO **");
@@ -32,11 +33,47 @@ public class ElCielo {
         try{
 
             if(menuOption==1) {
-                System.out.println("Bienvenido a Restaaurante Cielo. Registra un empleado");
+                System.out.println("Bienvenido a Restaurante Cielo. Vamos a registrar un empleado... ");
+
+                System.out.println("Digita el id del empleado: ");
+                employes.put("id", Entry.nextInt());
+
+                System.out.println("Digita el nombre completo del empleado: ");
+                Entry.nextLine();
+                employes.put("Nombre", Entry.nextLine());
+
+                System.out.println("Digita la fecha de nacimiento del empleado: ");
+                employes.put("F_Nacimiento", Entry.nextLine());
+
+                System.out.println("Digita el cargo del empleado: ");
+                employes.put("Cargo", Entry.nextLine());
+
+                System.out.println("Digita el salario del empleado: ");
+                employes.put("Cargo", Entry.nextFloat());
+
+                workes.add(employes);
+
+
 
             }
             else if(menuOption==2){
-                System.out.println("Registra un plato");
+                System.out.println("Vamos a registrar un plato... ");
+
+                System.out.println("Digita el id del plato: ");
+                dishes.put("id", Entry.nextInt());
+
+                System.out.println("Digita el nombre del plato: ");
+                Entry.nextLine();
+                dishes.put("Nombre", Entry.nextLine());
+
+                System.out.println("Digita los ingredientes del plato: ");
+
+                dishesRestaurant.add(dishes);
+
+
+                System.out.println("Digita el Precio del plato: ");
+                dishes.put("Cargo", Entry.nextFloat());
+
             }
             else if(menuOption==3){
                 System.out.println("Ver empleados registrados");
